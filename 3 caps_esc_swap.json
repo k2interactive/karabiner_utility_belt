@@ -1,0 +1,22 @@
+{
+  "description": "Caps Esc Swap",
+  "manipulators": [
+    {
+      "description": "esc = caps switch",
+      "from": {
+        "key_code": "escape",
+        "modifiers": {
+          "optional": [
+            "caps_lock"
+          ]
+        }
+      },
+      "to": [
+        {
+          "key_code": "caps_lock"
+        }
+      ],
+      "type": "basic"
+    }
+  ]
+}

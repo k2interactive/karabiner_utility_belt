@@ -1,0 +1,68 @@
+{
+  "description": "Double Tap R_Opt for Mission Control",
+  "manipulators": [
+    {
+      "conditions": [
+        {
+          "name": "right_option pressed",
+          "type": "variable_if",
+          "value": 1
+        }
+      ],
+      "from": {
+        "key_code": "right_option",
+        "modifiers": {
+          "optional": [
+            "any"
+          ]
+        }
+      },
+      "to": [
+        {
+          "key_code": "mission_control"
+        }
+      ],
+      "type": "basic"
+    },
+    {
+      "from": {
+        "key_code": "right_option",
+        "modifiers": {
+          "optional": [
+            "any"
+          ]
+        }
+      },
+      "to": [
+        {
+          "set_variable": {
+            "name": "right_option pressed",
+            "value": 1
+          }
+        },
+        {
+          "key_code": "right_option"
+        }
+      ],
+      "to_delayed_action": {
+        "to_if_canceled": [
+          {
+            "set_variable": {
+              "name": "right_option pressed",
+              "value": 0
+            }
+          }
+        ],
+        "to_if_invoked": [
+          {
+            "set_variable": {
+              "name": "right_option pressed",
+              "value": 0
+            }
+          }
+        ]
+      },
+      "type": "basic"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "description": "Cmd <F1>/<F2> for normal function behavior",
+  "manipulators": [
+    {
+      "from": {
+        "key_code": "display_brightness_decrement",
+        "modifiers": {
+          "mandatory": [
+            "left_control"
+          ]
+        }
+      },
+      "to": [
+        {
+          "key_code": "f1"
+        }
+      ],
+      "type": "basic"
+    },
+    {
+      "from": {
+        "key_code": "display_brightness_increment",
+        "modifiers": {
+          "mandatory": [
+            "left_control"
+          ]
+        }
+      },
+      "to": [
+        {
+          "key_code": "f2"
+        }
+      ],
+      "type": "basic"
+    }
+  ]
+}

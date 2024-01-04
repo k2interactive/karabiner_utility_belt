@@ -1,0 +1,27 @@
+{
+  "description": "tap left shift for alt 0",
+  "manipulators": [
+    {
+      "description": "l_shift = 0 (tap) | l_shift (hold)",
+      "from": {
+        "key_code": "left_shift",
+        "modifiers": {
+          "optional": [
+            "any"
+          ]
+        }
+      },
+      "to": [
+        {
+          "key_code": "left_shift"
+        }
+      ],
+      "to_if_alone": [
+        {
+          "key_code": "0"
+        }
+      ],
+      "type": "basic"
+    }
+  ]
+}

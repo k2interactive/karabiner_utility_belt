@@ -1,0 +1,30 @@
+{
+  "description": "tap right shift for alt $",
+  "manipulators": [
+    {
+      "description": "r_shift = $ (tap) | r_shift (hold)",
+      "from": {
+        "key_code": "right_shift",
+        "modifiers": {
+          "optional": [
+            "any"
+          ]
+        }
+      },
+      "to": [
+        {
+          "key_code": "right_shift"
+        }
+      ],
+      "to_if_alone": [
+        {
+          "key_code": "4",
+          "modifiers": [
+            "right_shift"
+          ]
+        }
+      ],
+      "type": "basic"
+    }
+  ]
+}

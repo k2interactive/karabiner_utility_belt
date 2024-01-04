@@ -1,0 +1,51 @@
+{
+  "description": "Hold Caps or Enter for Ctrl",
+  "manipulators": [
+    {
+      "description": "caps = esc (tap) | control (hold)",
+      "from": {
+        "key_code": "caps_lock",
+        "modifiers": {
+          "optional": [
+            "any"
+          ]
+        }
+      },
+      "to": [
+        {
+          "key_code": "left_control",
+          "modifiers": []
+        }
+      ],
+      "to_if_alone": [
+        {
+          "key_code": "escape"
+        }
+      ],
+      "type": "basic"
+    },
+    {
+      "description": "return = return (tap) | control (hold)",
+      "from": {
+        "key_code": "return_or_enter",
+        "modifiers": {
+          "optional": [
+            "any"
+          ]
+        }
+      },
+      "to": [
+        {
+          "key_code": "right_control",
+          "modifiers": []
+        }
+      ],
+      "to_if_alone": [
+        {
+          "key_code": "return_or_enter"
+        }
+      ],
+      "type": "basic"
+    }
+  ]
+}

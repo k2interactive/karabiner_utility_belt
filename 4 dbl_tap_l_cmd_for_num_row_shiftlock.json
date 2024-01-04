@@ -1,0 +1,370 @@
+{
+  "description": "Dbl tap L_Cmd for Num Row ShiftLock",
+  "manipulators": [
+    {
+      "description": "Set cmd_num_mod variable if left_command pressed",
+      "conditions": [
+        {
+          "name": "cmd_num_mod",
+          "type": "variable_unless",
+          "value": 1
+        },
+        {
+          "name": "left_command pressed",
+          "type": "variable_if",
+          "value": 1
+        }
+      ],
+      "from": {
+        "key_code": "left_command"
+      },
+      "to": [
+        {
+          "set_variable": {
+            "name": "cmd_num_mod",
+            "value": 1
+          }
+        }
+      ],
+      "type": "basic"
+    },
+    {
+      "description": "Unset cmd_num_mod if already set",
+      "conditions": [
+        {
+          "name": "cmd_num_mod",
+          "type": "variable_if",
+          "value": 1
+        },
+        {
+          "name": "left_command pressed",
+          "type": "variable_if",
+          "value": 1
+        }
+      ],
+      "from": {
+        "key_code": "left_command"
+      },
+      "to": [
+        {
+          "set_variable": {
+            "name": "cmd_num_mod",
+            "value": 0
+          }
+        }
+      ],
+      "type": "basic"
+    },
+    {
+      "description": "set left_command pressed",
+      "from": {
+        "key_code": "left_command",
+        "modifiers": {
+          "optional": [
+            "any"
+          ]
+        }
+      },
+      "to": [
+        {
+          "set_variable": {
+            "name": "left_command pressed",
+            "value": 1
+          }
+        },
+        {
+          "key_code": "left_command"
+        }
+      ],
+      "to_delayed_action": {
+        "to_if_canceled": [
+          {
+            "set_variable": {
+              "name": "left_command pressed",
+              "value": 0
+            }
+          }
+        ],
+        "to_if_invoked": [
+          {
+            "set_variable": {
+              "name": "left_command pressed",
+              "value": 0
+            }
+          }
+        ]
+      },
+      "type": "basic"
+    },
+    {
+      "description": "toggle num lock for 1",
+      "conditions": [
+        {
+          "name": "cmd_num_mod",
+          "type": "variable_if",
+          "value": 1
+        }
+      ],
+      "from": {
+        "key_code": "1",
+        "modifiers": {
+          "optional": [
+            "caps_lock"
+          ]
+        }
+      },
+      "to": [
+        {
+          "key_code": "1",
+          "modifiers": [
+            "left_shift"
+          ]
+        }
+      ],
+      "type": "basic"
+    },
+    {
+      "description": "toggle num lock for 2",
+      "conditions": [
+        {
+          "name": "cmd_num_mod",
+          "type": "variable_if",
+          "value": 1
+        }
+      ],
+      "from": {
+        "key_code": "2",
+        "modifiers": {
+          "optional": [
+            "caps_lock"
+          ]
+        }
+      },
+      "to": [
+        {
+          "key_code": "2",
+          "modifiers": [
+            "left_shift"
+          ]
+        }
+      ],
+      "type": "basic"
+    },
+    {
+      "description": "toggle num lock for 3",
+      "conditions": [
+        {
+          "name": "cmd_num_mod",
+          "type": "variable_if",
+          "value": 1
+        }
+      ],
+      "from": {
+        "key_code": "3",
+        "modifiers": {
+          "optional": [
+            "caps_lock"
+          ]
+        }
+      },
+      "to": [
+        {
+          "key_code": "3",
+          "modifiers": [
+            "left_shift"
+          ]
+        }
+      ],
+      "type": "basic"
+    },
+    {
+      "description": "toggle num lock for 4",
+      "conditions": [
+        {
+          "name": "cmd_num_mod",
+          "type": "variable_if",
+          "value": 1
+        }
+      ],
+      "from": {
+        "key_code": "4",
+        "modifiers": {
+          "optional": [
+            "caps_lock"
+          ]
+        }
+      },
+      "to": [
+        {
+          "key_code": "4",
+          "modifiers": [
+            "left_shift"
+          ]
+        }
+      ],
+      "type": "basic"
+    },
+    {
+      "description": "toggle num lock for 5",
+      "conditions": [
+        {
+          "name": "cmd_num_mod",
+          "type": "variable_if",
+          "value": 1
+        }
+      ],
+      "from": {
+        "key_code": "5",
+        "modifiers": {
+          "optional": [
+            "caps_lock"
+          ]
+        }
+      },
+      "to": [
+        {
+          "key_code": "5",
+          "modifiers": [
+            "left_shift"
+          ]
+        }
+      ],
+      "type": "basic"
+    },
+    {
+      "description": "toggle num lock for 6",
+      "conditions": [
+        {
+          "name": "cmd_num_mod",
+          "type": "variable_if",
+          "value": 1
+        }
+      ],
+      "from": {
+        "key_code": "6",
+        "modifiers": {
+          "optional": [
+            "caps_lock"
+          ]
+        }
+      },
+      "to": [
+        {
+          "key_code": "6",
+          "modifiers": [
+            "left_shift"
+          ]
+        }
+      ],
+      "type": "basic"
+    },
+    {
+      "description": "toggle num lock for 7",
+      "conditions": [
+        {
+          "name": "cmd_num_mod",
+          "type": "variable_if",
+          "value": 1
+        }
+      ],
+      "from": {
+        "key_code": "7",
+        "modifiers": {
+          "optional": [
+            "caps_lock"
+          ]
+        }
+      },
+      "to": [
+        {
+          "key_code": "7",
+          "modifiers": [
+            "left_shift"
+          ]
+        }
+      ],
+      "type": "basic"
+    },
+    {
+      "description": "toggle num lock for 8",
+      "conditions": [
+        {
+          "name": "cmd_num_mod",
+          "type": "variable_if",
+          "value": 1
+        }
+      ],
+      "from": {
+        "key_code": "8",
+        "modifiers": {
+          "optional": [
+            "caps_lock"
+          ]
+        }
+      },
+      "to": [
+        {
+          "key_code": "8",
+          "modifiers": [
+            "left_shift"
+          ]
+        }
+      ],
+      "type": "basic"
+    },
+    {
+      "description": "toggle num lock for 9",
+      "conditions": [
+        {
+          "name": "cmd_num_mod",
+          "type": "variable_if",
+          "value": 1
+        }
+      ],
+      "from": {
+        "key_code": "9",
+        "modifiers": {
+          "optional": [
+            "caps_lock"
+          ]
+        }
+      },
+      "to": [
+        {
+          "key_code": "9",
+          "modifiers": [
+            "left_shift"
+          ]
+        }
+      ],
+      "type": "basic"
+    },
+    {
+      "description": "toggle num lock for 0",
+      "conditions": [
+        {
+          "name": "cmd_num_mod",
+          "type": "variable_if",
+          "value": 1
+        }
+      ],
+      "from": {
+        "key_code": "0",
+        "modifiers": {
+          "optional": [
+            "caps_lock"
+          ]
+        }
+      },
+      "to": [
+        {
+          "key_code": "0",
+          "modifiers": [
+            "left_shift"
+          ]
+        }
+      ],
+      "type": "basic"
+    }
+  ]
+}
