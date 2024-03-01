@@ -1,0 +1,40 @@
+{
+    "description": "Macro/Key sequence/chord Demo. final value of repeat set to true will repeat the final step's value at your system key repeat rate while held. false will play the sequence and stop regardless of continued press duration",
+    "manipulators": [
+        {
+            "from": {
+                "key_code": "s",
+                "modifiers": {
+                    "mandatory": [
+                        "fn"
+                    ],
+                    "optional": [
+                        "caps_lock"
+                    ]
+                }
+            },
+            "to": [
+                {
+                    "key_code": "m"
+                },
+                {
+                    "key_code": "o"
+                },
+                {
+                    "key_code": "c"
+                },
+                {
+                    "key_code": "c"
+                },
+                {
+                    "key_code": "h"
+                },
+                {
+                    "key_code": "a",
+                    "repeat": false
+                }
+            ],
+            "type": "basic"
+        }
+    ]
+}
