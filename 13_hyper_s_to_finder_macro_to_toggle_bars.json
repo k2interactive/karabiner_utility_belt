@@ -1,0 +1,47 @@
+{
+    "description": "Bars-B-Gone (Finder)",
+    "manipulators": [
+        {
+            "type": "basic",
+            "from": {
+                "key_code": "s",
+                "modifiers": {
+                    "mandatory": [
+                        "left_control",
+                        "left_option",
+                        "left_command",
+                        "left_shift"
+                    ],
+                    "optional": [
+                        "caps_lock"
+                    ]
+                }
+            },
+            "to": [
+                {
+                    "key_code": "s",
+                    "modifiers": [
+                        "left_command",
+                        "left_control"
+                    ]
+                },
+                {
+                    "key_code": "t",
+                    "modifiers": [
+                        "left_command",
+                        "left_shift"
+                    ],
+                    "repeat": false
+                }
+            ],
+            "conditions": [
+                {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                        "^com.apple.finder"
+                    ]
+                }
+            ]
+        }
+    ]
+}
